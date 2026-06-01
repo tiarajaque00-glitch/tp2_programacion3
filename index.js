@@ -8,19 +8,19 @@ const meriendas = [
     "Mate con tortafritas",
 ];
 
-const contenedor = document.getElementById("listaMeriendas");
+const lista = document.getElementById("listaMeriendas");
 
 meriendas.forEach(merienda => {
-    contenedor.innerHTML += `
+    lista.innerHTML += `
         <div class="caja">
-            ${merienda}
+            <h3>${merienda}</h3>
         </div>
     `;
 });
 
 const boton = document.getElementById("btnCantidad");
 
-boton.addEventListener("click", () => {
+boton.addEventListener("click", function () {
     document.getElementById("resultado").textContent =
-        `Hay ${meriendas.length} meriendas disponibles`;
+        `Hay ${meriendas.length} meriendas disponibles.`;
 });

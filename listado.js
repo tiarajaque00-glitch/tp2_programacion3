@@ -1,16 +1,19 @@
 const productos = [
-    { nombre: "Manzana", categoria: "fruta" },
-    { nombre: "Banana", categoria: "fruta" },
-    { nombre: "Pera", categoria: "fruta" },
-    { nombre: "Pan", categoria: "panaderia" },
-    { nombre: "Facturas", categoria: "panaderia" },
-    { nombre: "Torta", categoria: "panaderia" }
+    { nombre: "Frozen", categoria: "película" },
+    { nombre: "The DUFF", categoria: "película" },
+    { nombre: "Black Swan - BTS", categoria: "Canción" },
+    { nombre: "Jump - BTS", categoria: "Canción" },
+    { nombre: "Minecraft", categoria: "Juegos" },
+    { nombre: "Sacape Cube", categoria: "Juegos" },
+    { nombre: "Panqueques", categoria: "Comida" },
+    { nombre: "Pizza", categoria: "Comida" },
 ];
 
+    mostrarProductos(pendientes);
 const contenedor =
     document.getElementById("contenedorProductos");
 
-function mostrar(lista) {
+function mostrarProductos(lista) {
 
     contenedor.innerHTML = "";
 
@@ -18,27 +21,26 @@ function mostrar(lista) {
 
         contenedor.innerHTML += `
             <div class="caja">
-                ${producto.nombre}
+                <h3>${producto.nombre}</h3>
+                <p>${producto.categoria}</p>
             </div>
         `;
     });
 }
 
-mostrar(productos);
+mostrarProductos(productos);
 
-document
-.getElementById("mostrarTodos")
+document.getElementById("mostrarTodos")
 .addEventListener("click", () => {
-    mostrar(productos);
+    mostrarProductos(productos);
 });
 
-document
-.getElementById("mostrarFrutas")
+document.getElementById("mostrarPendientes")
 .addEventListener("click", () => {
 
-    const frutas = productos.filter(
-        producto => producto.categoria === "fruta"
+    const pendientes = productos.filter(
+        producto => producto.categoria === "pendiente"
     );
 
-    mostrar(frutas);
+    mostrarProductos(pendientes);
 });
