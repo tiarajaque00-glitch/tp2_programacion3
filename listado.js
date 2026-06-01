@@ -1,5 +1,4 @@
 const productos = [
-<<<<<<< HEAD
     { nombre: 'Frozen', categoria: 'película' },
     { nombre: 'The DUFF', categoria: 'película' },
     { nombre: 'Black Swan - BTS', categoria: 'Canción' },
@@ -8,24 +7,12 @@ const productos = [
     { nombre: 'Sacape Cube', categoria: 'Juegos' },
     { nombre: 'Panqueques', categoria: 'Comida' },
     { nombre: 'Pizza', categoria: 'Comida' },
-=======
-    { nombre: "Manzana", categoria: "fruta" },
-    { nombre: "Banana", categoria: "fruta" },
-    { nombre: "Pera", categoria: "fruta" },
-    { nombre: "Pan", categoria: "panaderia" },
-    { nombre: "Facturas", categoria: "panaderia" },
-    { nombre: "Torta", categoria: "panaderia" }
->>>>>>> 71397358e322b9b7ac05b12fcc1062c2234ce870
 ];
 
 const contenedor =
     document.getElementById("contenedorProductos");
 
-<<<<<<< HEAD
 function mostrarProductos(lista) {
-=======
-function mostrar(lista) {
->>>>>>> 71397358e322b9b7ac05b12fcc1062c2234ce870
 
     contenedor.innerHTML = "";
 
@@ -33,18 +20,13 @@ function mostrar(lista) {
 
         contenedor.innerHTML += `
             <div class="caja">
-<<<<<<< HEAD
                 <h3>${producto.nombre}</h3>
                 <p>${producto.categoria}</p>
-=======
-                ${producto.nombre}
->>>>>>> 71397358e322b9b7ac05b12fcc1062c2234ce870
             </div>
         `;
     });
 }
 
-<<<<<<< HEAD
 mostrarProductos(productos);
 
 document.getElementById("mostrarTodos")
@@ -60,23 +42,4 @@ document.getElementById("mostrarComida")
     );
 
     mostrarProductos(pendientes);
-=======
-mostrar(productos);
-
-document
-.getElementById("mostrarTodos")
-.addEventListener("click", () => {
-    mostrar(productos);
-});
-
-document
-.getElementById("mostrarFrutas")
-.addEventListener("click", () => {
-
-    const frutas = productos.filter(
-        producto => producto.categoria === "fruta"
-    );
-
-    mostrar(frutas);
->>>>>>> 71397358e322b9b7ac05b12fcc1062c2234ce870
 });
