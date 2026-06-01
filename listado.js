@@ -1,15 +1,14 @@
 const productos = [
-    { nombre: "Frozen", categoria: "película" },
-    { nombre: "The DUFF", categoria: "película" },
-    { nombre: "Black Swan - BTS", categoria: "Canción" },
-    { nombre: "Jump - BTS", categoria: "Canción" },
-    { nombre: "Minecraft", categoria: "Juegos" },
-    { nombre: "Sacape Cube", categoria: "Juegos" },
-    { nombre: "Panqueques", categoria: "Comida" },
-    { nombre: "Pizza", categoria: "Comida" },
+    { nombre: 'Frozen', categoria: 'película' },
+    { nombre: 'The DUFF', categoria: 'película' },
+    { nombre: 'Black Swan - BTS', categoria: 'Canción' },
+    { nombre: 'Jump - BTS', categoria: 'Canción' },
+    { nombre: 'Minecraft', categoria: 'Juegos' },
+    { nombre: 'Sacape Cube', categoria: 'Juegos' },
+    { nombre: 'Panqueques', categoria: 'Comida' },
+    { nombre: 'Pizza', categoria: 'Comida' },
 ];
 
-    mostrarProductos(pendientes);
 const contenedor =
     document.getElementById("contenedorProductos");
 
@@ -35,11 +34,11 @@ document.getElementById("mostrarTodos")
     mostrarProductos(productos);
 });
 
-document.getElementById("mostrarPendientes")
+document.getElementById("mostrarComida")
 .addEventListener("click", () => {
 
     const pendientes = productos.filter(
-        producto => producto.categoria === "pendiente"
+        producto => producto.categoria === "Comida"
     );
 
     mostrarProductos(pendientes);
